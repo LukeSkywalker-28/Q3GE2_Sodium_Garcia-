@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p id="prompt"></p>
+    <script>
+    var a = prompt("Enter the value of the first length");
+    var b = prompt("Enter the value of the second length");
+    var c = prompt("Enter the value of the third length");
+
+    function determineTriangle(a, b, c) {
+	if (isNaN(a,b,c)) {
+	return "Invalid inputs detected";
+	}
+    // Checks if input values are numbers
+    else {
+		if (a == b && b == c) {
+			// For equilateral triangles
+			return "The Triangle is EQUILATERAL";
+		} else if (a == b || b == c || a == c) {
+			// For isocles triangles 
+			return  "The triangle is ISOSCELES";
+		} else {
+			// For scalene triangles 
+			return "The triangle is SCALENE";
+		}
+	}
+}
+
+window.alert(determineTriangle (a, b, c));
+    </script>
+</body>
+</html>
